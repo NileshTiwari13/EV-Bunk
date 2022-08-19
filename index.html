@@ -1,0 +1,531 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+
+    <!-- Style sheet link -->
+   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="waves.css">
+    <!-- CSS only -->
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://kit.fontawesome.com/13a51c690d.js" crossorigin="anonymous"></script>
+<!-- title icon  -->
+   <title>EV Bunk | Home</title>
+   <link rel="icon" href="image/fev.ico" sizes="32X32" type="image/icon type">
+   <!-- font link -->
+   
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,700'>
+  
+  </head>
+
+<body >
+    
+<!--Pre loader-->
+  <div class="loader_bg">
+      <div class="loader">
+      </div>
+  </div>
+
+
+
+
+<!-- nav bar and bg video  -->
+<section class="nav">
+    <div class="front">
+        <video autoplay loop muted plays-inline class="back-video">
+        <source src="image/video.mp4"  type="video/mp4">
+        </video>
+
+
+
+        <nav class= "nav">
+         <div class="logoName">
+            <a href="index.html">
+                <div  class="logo"></div>
+                <span class="nav-logo-span">EV BUNK</span> 
+              </a>
+            </div>
+            <ul class="nav-ul">
+               <li class="nav-li" ><a href="index.html">Home</a></li>
+               <li class="nav-li"><a href="login_page.html">Login</a></li>
+               <li class="nav-li" ><a href="register_page.html">Sign Up</a></li>
+               <li class="nav-li"><a>About Us</a></li>
+            </ul>
+         <!-- nav bar tri color  -->
+      
+         <svg
+         class="nav-waves"
+         xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 24 150 28"
+         preserveAspectRatio="none"
+         shape-rendering="auto"
+         style="opacity: 50%;"
+       >
+         <defs>
+           <path
+             id="gentle-wave"
+             d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+           />
+         </defs>
+         <g class="parallax">
+           <use
+             xlink:href="#gentle-wave"
+             x="48"
+             y="0"
+             fill="#FF5733"
+           />
+       
+           <use
+             xlink:href="#gentle-wave"
+             x="48"
+             y="5"
+             fill="#fff"
+           />
+           <use xlink:href="#gentle-wave" x="48" y="7" fill="#138808" />
+         </g>
+       </svg>
+      
+  <!-- nav bar tri color -->  
+
+</nav>
+        <div class="front-name">
+           <h1>EV BUnk</h1>
+           <span> Find electric vehicle charging station near you, book a slot, digitally pay for charging car.<br>
+            
+            <div class="word-change">
+                
+            <div class="word"> SEARCH !!</div>
+            <div class="word"> BOOK !!</div>
+            <div class="word"> PAY !!</div>
+            </div>
+          </span> 
+         
+          <form   class="search-box" action="UserSearch.html"  method="post" >
+            <input class="search-txt"required type="text" placeholder=" Search for the city"  name="search">
+         </form>
+       
+            <!--  <% Message msg = (Message) session.getAttribute("msg");
+						if (msg != null) {
+						%> <div class="alert <%= msg.getCssClass() %>" role="alert">
+						    <div class="popup" id="popup"  >
+                          <img src="image/sad.gif" >
+                            <h2 >No Slots Found!!</h2>
+							<p>Sorry, curently No slots are available in your area, kindly wait for sometime and try again later!!</p>
+							<button type="button" onclick="closePopup()" > ok</button>
+      					</div>
+      					</div>
+                          
+ <script>
+ 
+let popup=document.getElementById("popup");
+function closePopup(){
+	popup.classList.add("closepopup");
+	
+}
+</script>
+<style>
+.popup {
+  width: 400px;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  padding: 0 30px 30px ;
+  color: #333;
+  transition: transform 0.4s,top 0.4s;
+  z-index: 50;
+
+
+}
+
+
+.popup img{
+  width: 180px;
+  margin-top: -50px;
+ 
+  border:none;
+  
+}.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+
+}
+.closepopup{
+transform: translate(-50%,-50%)scale(0.1);
+visibility:hidden;
+z-index:-9999;
+top:0;
+}
+</style>
+
+						<% session.removeAttribute("msg");
+						} %>
+						
+</div>
+			
+			
+						 <% Message msgbook = (Message) session.getAttribute("msg_book"); 
+						 if (msgbook!= null) {	%>	 
+	        	<div  class="alert <%= msgbook.getCssClass() %>" role="alert">						
+		        <div class="popup" id="pop"  >\
+		    <!--   <img src="image/check-green.gif" > 
+               <img src="image/blush.gif" >  
+                 <h2 >Thank You!!</h2>
+                <%= msgbook.getContent() %> 
+                <p>We are glad that you choose Us. &#128516</p>
+                 <button type="button" onclick="closePopup()" > ok</button>
+                 </div>
+             </div>    
+             
+             
+ <script>
+ 
+let pop=document.getElementById("popup");
+function closePopup(){
+	popup.classList.add("closepopup");
+	
+}
+</script>
+             
+
+<style>
+.popup {
+  width: 400px;
+  background-color: white;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+  padding: 0 30px 30px ;
+  color: #333;
+  transition: transform 0.4s,top 0.4s;
+  z-index: 50;
+
+
+}
+
+
+.popup img{
+  width: 180px;
+  margin-top: -50px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  
+}.popup h2{
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+
+}
+
+.popup button{
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+
+}
+.closepopup{
+transform: translate(-50%,-50%)scale(0.1);
+visibility:hidden;
+z-index:-9999;
+top:0;
+}
+</style>
+             <% session.removeAttribute("msg_book");} %>
+        
+          </div>
+        -->
+      </section>
+      
+ <!--end of nav bar-->
+ <!--end of section 1-->
+<!-- //starting of 2 section\\ -->
+<!-- content and flip card  -->
+<!--<div class="wave-body-test">-->
+<section class="skew containerskew-black"> 
+<div class="body-part">
+ <div class="container">
+<div class="box">
+    <div class="box-front">
+        <img src="image/icons8-charging-station-100.png" alt="">
+    </div>
+    <div class="box-back">
+    <h1> 2000+</h1>
+       <p>Charging sessions</p>
+
+    </div>
+</div>
+<div class="box">
+    <div class="box-front">
+        <img src="image/icons8-download-100.png" alt="">
+    </div>
+    <div class="box-back">
+    <h1> 40,000</h1>
+       <p>Green kms driven</p>
+
+    </div>
+</div>
+
+<div class="box">
+    <div class="box-front">
+        <img src="image/icons8-charging-station-10.png" alt="">
+    </div>
+    <div class="box-back">
+    <h1>150+</h1>
+       <p>Charging stations</p>
+    </div>
+</div>
+<div class="box">
+    <div class="box-front">
+        <img src="image/icons8-downtown-100.png">
+    </div>
+    <div class="box-back">
+    <h1>20+</h1>
+       <p>Cities</p>
+    </div>
+</div>
+</div>
+
+<div class="pci containerskew">  
+    <h1>Public Charging Infrastructure</h1>
+   <p>Our network consists of both car chargers and bike chargers. Find smart public EV chargers at parking places such as office spaces, shopping malls, residential apartments, restaurant, hotels etc.
+
+   </p>
+</div>
+
+</div>
+</section>
+<!-- //end of 2 section\\ -->
+<!-- content and flip card  -->
+
+<!-- //statring of 3 section\\ -->
+<section class="skew">
+<!--  3 steps  -->
+
+<div class="container-option">
+   <div class="option-head">
+    <h2 data-text="Fast Charge Your EV in 3 Easy Steps" >Fast Charge Your EV in 3 Easy Steps</h2>
+   </div>
+    <div class="option-body">
+    <div class="options">
+        <div class="option active" style="--optionBackground:url(image/step1.webp);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <img src="image/icons8-one-100 (1).png" />
+              </div>
+              <div class="info">
+                 <div class="main">Step 1</div>
+                 <div class="sub">Connect to your charging port.</div>
+              </div>
+           </div>
+        </div>
+        <div class="option" style="--optionBackground:url(image/step2.webp);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <img src="image/icons8-two-100.png" />
+              </div>
+              <div class="info">
+                 <div class="main">Tap to Start Your Charge</div>
+                 <div class="sub">By EV Bunk app, UPI or credit card.</div>
+              </div>
+           </div>
+        </div>
+        <div class="option" style="--optionBackground:url(image/step3);">
+           <div class="shadow"></div>
+           <div class="label">
+              <div class="icon">
+                 <img src="image/icons8-three-100.png" />
+              </div>
+              <div class="info">
+                 <div class="main">Charge Up and Go</div>
+                 <div class="sub">Your next destination awaits.</div>
+              </div>
+           </div>
+        </div>
+     </div>
+   </div>
+    </div>
+
+ <!--  3 steps  -->
+ 
+<!-- Admin Register Join us  -->
+<div class="container-reg-img">
+
+   <div class="container-reg-box  containerskew"> 
+      <h1>Become a EV Charger Host </h1>
+     <p>Earn with us. Become a part of Statiq’s EV charging network. Be a proud owner of India's smartest and most affordable EV Charging station.  From installation to smart metering and secure payments, we are there with you in this.
+     </p>
+     <h4>Just Click the button below and Join us.</h4>
+     <a href="register_page.html"> Join Us !!</a>
+  </div>
+
+
+</div>
+
+</section>
+<!-- //end of 3 section\\ -->
+<!-- Admin Register Join us  -->
+<!-- //fouter// -->
+
+</div>
+</div>
+
+ <!--<div class="wave-body"> -->
+   
+<div class="footer-content">
+
+    <div class="part1">
+      <div class="footer-logo" > 
+        <a href="index.html" style="text-decoration:none; color:#fff;">
+         <img src="image/EV_BUNK-removebg-preview.png" class="Footlogo">  </a>
+         <h5> EV BUNK </h5>
+      </div>
+    </div>
+
+      <div class="part2">
+         <div class="link">
+      <p > <a class="home">Homepage </a></p>
+      <p> <a href="login_page.html">Login</a></p>
+      <p><a href="register_page.html">Register</a></p>
+      <p><a href="#">About us</a></p>
+         </div>
+
+          <div class="footer-text">
+      <h3>EVBunk for Everyone</h3>
+      <p>EVBunk is here for EV drivers, business owners, policymakers, fleets,</p>
+      <p id="footer-text">automakers, and the list goes on! Are you part of the EV revolution? Join us!</p>
+         </div>
+    
+         <div class="icons">
+      <a href="index.html"> <img  src="image/371907300_INSTAGRAM_ICON_TRANSPARENT_400.gif"> </a>
+       <a href="https://www.facebook.com/">    <img src="image/371907490_FACEBOOK_ICON_TRANSPARENT_400.gif"></a>
+       <a href="https://www.linkedin.com/">     <img src="image/372102050_LINKEDIN_ICON_TRANSPARENT_1080.gif"></a>
+       <a href="https://www.youtube.com/">        <img src="image/371907120_YOUTUBE_ICON_TRANSPARENT_400.gif"></a>
+       <a  href="https://twitter.com/i/flow/login">  <img src="image/371907030_TWITTER_ICON_TRANSPARENT_400.gif"></a>
+       <a href="https://discord.gg/f6Y6jgyjba">  <img src="image/372108630_DISCORD_LOGO_400.gif"></a>
+       <a href="https://web.whatsapp.com/"> <img src="image/372108180_WHATSAPP_ICON_400.gif"></a>
+
+         </div>
+      </div>
+  </div>
+   <div>
+   
+   
+        <svg
+          class="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shape-rendering="auto"
+        >
+          <defs>
+            <path
+              id="gentle-wave"
+              d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
+            />
+          </defs>
+          <g class="parallax">
+         
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="3"
+              fill="#ff5733"
+            />
+            <use
+              xlink:href="#gentle-wave"
+              x="48"
+              y="5"
+              fill="rgb(255,255,255)"
+            />
+            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgb(0,128,0)" />
+          </g>
+        </svg>
+      </div>
+  
+</div>   
+
+<!-- footer -->
+<button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+
+
+      
+
+
+ <script>
+     setTimeout(function(){
+         $('.loader_bg').fadeToggle();
+     }, 1500);
+ </script>
+<script>
+ //Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+ 
+</script>
+
+
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="script.js"></script>
+
+
+
+</body>
+
+</html>
